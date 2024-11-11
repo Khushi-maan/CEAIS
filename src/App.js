@@ -5,11 +5,11 @@ import Search from "./components/Search";
 
 function App() {
   return (
-    <>
+    <div className="bg-white">
       <Header />
       <Search />
       <Innovation />
-    </>
+    </div>
   );
 }
 
