@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./common/Navbar";
-import Button from "./common/Button";
+import Cta from "./common/Cta";
 
 const Header = () => {
   return (
@@ -15,8 +15,8 @@ const Header = () => {
           increase efficiency, and drive innovation in your business
         </p>
         <div className="flex items-center justify-center sm:gap-6 gap-2.5 flex-wrap">
-          <Button name="Get Started Today" />
-          <Button white name="Watch A Demo" />
+          <Cta name="Get Started Today" />
+          <Cta white name="Watch A Demo" />
         </div>
       </div>
     </div>

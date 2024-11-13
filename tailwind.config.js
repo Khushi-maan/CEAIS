@@ -22,6 +22,7 @@ module.exports = {
         yellow: "#FFC107",
         "alice-blue": "#F2F8FF",
         "light-gray": "#D8D8D8",
+        clay: "#1B2228",
       },
       lineHeight: {
         120: "120%",

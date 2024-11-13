@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Logo } from "./Icon";
 import { Link } from "react-router-dom";
-import Button from "./Button";
-import Hamburger from "hamburger-react";
-import { ABOUT, FAQ, HOME, HOWITWORKS, MAIN } from "../../utils/const";
+import { MAIN } from "../../utils/const";
 import { NAV_BAR } from "./Helper";
+import Cta from "./Cta";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -36,11 +35,11 @@ const Navbar = () => {
               </li>
             ))}
             <li className="hidden max-lg:block transition-all duration-300 ease-linear">
-              <Button name="Contact Us" />
+              <Cta name="Contact Us" />
             </li>
           </ul>
           <div className="max-lg:hidden">
-            <Button name="Contact Us" />
+            <Cta name="Contact Us" />
           </div>
 
           <div

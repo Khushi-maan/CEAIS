@@ -1,7 +1,6 @@
 import React from "react";
 import { Searchbar } from "./common/Icon";
 import { SEARCH_ITEMS } from "./common/Helper";
-import Button from "./common/Button";
 
 const Search = () => {
   return (
@@ -9,13 +8,13 @@ const Search = () => {
       <p className="sm:text-xl text-lg font-open-sans font-semibold text-center text-black !leading-150 lg:mb-8 md:mb-6 mb-4">
         How will regulatory changes affect my business?
       </p>
-      <div class="relative w-full flex items-center gap-2 mx-auto border-light-gray border-solid border md:p-3.5 p-2 md:rounded-xl rounded-lg max-w-[522px] group lg:mb-16 md:mb-10 sm:mb-8 mb-6">
+      <div className="relative w-full flex items-center gap-2 mx-auto border-light-gray border-solid border md:p-3.5 p-2 md:rounded-xl rounded-lg max-w-[522px] group lg:mb-16 md:mb-10 sm:mb-8 mb-6">
         <input
           type="text"
           placeholder="Search here..."
-          class="w-full text-sm text-gray !leading-150 focus:outline-none focus:border-blue-500 bg-transparent"
+          className="w-full text-sm text-gray !leading-150 focus:outline-none focus:border-blue-500 bg-transparent"
         />
-        <span class="flex items-center pl-3 text-gray-500 group-hover:scale-110 transition-all duration-300 ease-linear">
+        <span className="flex items-center pl-3 text-gray-500 group-hover:scale-110 transition-all duration-300 ease-linear">
           <Searchbar />
         </span>
       </div>
