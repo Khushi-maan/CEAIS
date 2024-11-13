@@ -71,7 +71,7 @@ const SampleProjects = () => {
           >
             {SLIDER_DATA.map((value, index) => (
               <SwiperSlide key={index} className="group/img">
-                <div className="w-full overflow-hidden">
+                <div className="w-full overflow-hidden rounded-[7px]">
                   <img
                     src={value.img}
                     alt="images"
