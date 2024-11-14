@@ -87,7 +87,7 @@ const SampleProjects = () => {
                 <p className="mt-6">
                   <Link
                     to={"#"}
-                    className="group flex items-center gap-1.5 text-blue font-poppins font-semibold text-base !laeding-150"
+                    className="group inline-flex items-center gap-1.5 text-blue font-poppins font-semibold text-base !laeding-150"
                   >
                     {value.link}
                     <Rightarrow />
