@@ -1,1 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+:root {
+  --transitionLength: 0.4s;
+  --transitionTiming: ease;
+}
+
+.accordion-trigger-input {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+/* Styling for the accordion trigger (clickable title) */
+.accordion-trigger {
+  transition: box-shadow var(--transitionLength) var(--transitionTiming);
+}
+
+.accordion-trigger::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 2px solid #1B2228;
+  border-right: 2px solid #1B2228;
+  transform: rotate(135deg);
+  transition: transform var(--transitionLength) var(--transitionTiming);
+}
+
+.accordion-trigger-input:focus-visible ~ .accordion-trigger {
+  outline: 2px solid;
+  outline-offset: -2px;
+}
+
+.accordion-animation-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows var(--transitionLength) var(--transitionTiming);
+}
+
+.accordion-animation-wrapper.open {
+  grid-template-rows: 1fr;
+}
+
+/* Styling for the transform wrapper and content inside an accordion */
+.accordion-animation {
+  min-height: 0;
+}
+
+.accordion-transform-wrapper {
+  transform: translateY(-100%);
+  visibility: hidden;
+  transition: transform var(--transitionLength) var(--transitionTiming),
+    visibility 0s var(--transitionLength) var(--transitionTiming);
+}
+
+.accordion-animation-wrapper.open .accordion-transform-wrapper {
+  transform: translateY(0);
+  visibility: visible;
+  transition: transform var(--transitionLength) var(--transitionTiming),
+    visibility 0s linear;
+}
+
+.accordion-content * {
+  margin: 0;
+}
+
+/* Rotate icon when open */
+.accordion-trigger-input:checked ~ .accordion-trigger::after,
+.accordion-animation-wrapper.open ~ .accordion-trigger::after {
+  transform: rotate(135deg) rotateX(180deg) rotateY(180deg) translateY(4px)
+    translateX(-4px);
+}
+
+/* Shadow effect on open accordion */
+.accordion-trigger-input:checked ~ .accordion-trigger,
+.accordion-animation-wrapper.open ~ .accordion-trigger {
+  transition: box-shadow calc(var(--transitionLength) / 4)
+    var(--transitionTiming);
+}

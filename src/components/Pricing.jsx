@@ -16,6 +16,7 @@ const Pricing = () => {
         <div className="flex gap-6 items-center justify-center lg:mt-20 md:mt-12 sm:mt-10 mt-8 max-lg:flex-wrap">
           {PRICING_DATA.map((value, index) => (
             <div
+              key={index}
               className={`border-[1.5px] border-light-gray sm:rounded-2xl rounded-xl sm:p-6 p-4 max-lg:max-w-[364px] w-full relative  ${
                 index === 1 && "bg-white !border-blue"
               }`}

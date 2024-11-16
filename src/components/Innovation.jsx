@@ -13,7 +13,7 @@ const Innovation = () => {
           name="AI-Driven Innovation at Your Fingertips"
           className="lg:text-start lg:mx-0 max-w-[518px]"
         />
-        <p className="sm:text-base text-sm text-gray font-open-sans font-normal max-w-[348px] max-lg:text-center">
+        <p className="sm:text-base text-sm text-gray font-open-sans font-normal lg:max-w-[348px] max-lg:text-center">
           Lorem ipsum dolor sit amet consectetur. Consequat hendrerit vulputate
           tellus viverra arcu. Placerat amet sed pulvinar non.
         </p>

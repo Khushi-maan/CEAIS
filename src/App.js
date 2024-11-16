@@ -1,4 +1,5 @@
 import "./App.css";
+import Faqs from "./components/Faqs";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HowItWorks from "./components/HowItWorks";
@@ -16,7 +17,7 @@ function App() {
       <HowItWorks />
       <SampleProjects />
       <Pricing />
-      {/* <Faq /> */}
+      <Faqs />
       <Footer />
     </div>
   );
